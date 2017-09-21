@@ -3297,7 +3297,7 @@
     }
 
     addEvent(canvas, isTouch ? 'touchend touchcancel mouseup' : 'mouseup', function(e) {
-        if (isTouch) e = e.pageX ? e : e.touches.length ? e.touches[0] : {
+        if (isTouch) e = e.pageX ? e : e.changedTouches.length ? e.changedTouches[0] : {
             pageX: 0,
             pageY: 0
         };
